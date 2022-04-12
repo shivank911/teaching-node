@@ -60,3 +60,11 @@ module.exports.login = async function login(req,res){
         });
     }
 }
+
+module.exports.logout = async function logout (req,res){
+    res.cookie('Login',' ',{maxAge:1});
+    res.send({
+        message:"Logout successful",
+    })
+
+}
